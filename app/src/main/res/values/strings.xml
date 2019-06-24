@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+
+    <string name="question_text">The box for the first question...</string>
+
+    <string name="true_button">True</string>
+    <string name="false_button">False</string>
+
+    <string name="question_1">Does a double bass exist in the orchestra?</string>
+    <string name="question_2">Are there many sizes from the your ages to your height for double bass?</string>
+    <string name="question_3">Is the height of a double bass about 6 feet from scroll to endpoint?</string>
+    <string name="question_4">Can there be many names in double bass?</string>
+    <string name="question_5">Are there skills that are similar to other string instruments?</string>
+</resources>
