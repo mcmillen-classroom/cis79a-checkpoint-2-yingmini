@@ -1,14 +1,23 @@
 <resources>
     <string name="app_name">QuizApp</string>
 
-    <string name="question_text">The box for the first question...</string>
+    <string name="question_text">Silly</string>
 
     <string name="true_button">True</string>
     <string name="false_button">False</string>
 
-    <string name="question_1">Does a double bass exist in the orchestra?</string>
-    <string name="question_2">Are there many sizes from the your ages to your height for double bass?</string>
-    <string name="question_3">Is the height of a double bass about 6 feet from scroll to endpoint?</string>
-    <string name="question_4">Can there be many names in double bass?</string>
-    <string name="question_5">Are there skills that are similar to other string instruments?</string>
+    <string name="pre_button">Previous</string>
+    <string name="next_button">Next</string>
+
+    <string name="question_1">A double bass exist in the orchestra</string>
+    <string name="question_2">There are many sizes from the your ages to your height for double bass</string>
+    <string name="question_3">The height of a double bass is about 6 meter from scroll to endpoint</string>
+    <string name="question_4">There can be many names in double bass</string>
+    <string name="question_5">There are not many skills that relate to the other string instruments</string>
+
+    <string name="question_1_hint">There are cello, viola, violin</string>
+    <string name="question_2_hint">You would be growing old</string>
+    <string name="question_3_hint">The unit for its height</string>
+    <string name="question_4_hint">Bass?, Contra-bass?</string>
+    <string name="question_5_hint">How do you play those things?</string>
 </resources>
