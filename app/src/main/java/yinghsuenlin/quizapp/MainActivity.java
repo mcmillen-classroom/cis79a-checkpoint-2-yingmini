@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mFalseButton;
     private ImageButton mpreButton;
     private ImageButton mNextButton;
+    private Button mHintButton;
 
     private Question[] mQuestions;
     private int mIndex;
@@ -32,10 +33,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mFalseButton = (Button) findViewById(R.id.false_button);
         mpreButton = (ImageButton) findViewById(R.id.pre_button);
         mNextButton = (ImageButton) findViewById(R.id.next_button);
+        mHintButton = (Button) findViewById(R.id.hint_button);
 
         mTrueButton.setOnClickListener(this);
         mFalseButton.setOnClickListener(this);
+        mpreButton.setOnClickListener(this);
         mNextButton.setOnClickListener(this);
+        mHintButton.setOnClickListener(this);
 
         mTextView = (TextView) findViewById(R.id.text_view);
 
@@ -63,8 +67,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         else if(view.getId() == R.id.pre_button) {
-            mIndex++;
-            mTextView.setText(mQuestions[mIndex].getTextResId());
+            mIndex--;
+
+            if(mIndex >= 0)
+            {
+                mTextView.setText(mQuestions[mIndex].getTextResId());
+            }
         }
 
         else if(view.getId() == R.id.next_button) {
@@ -75,11 +83,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             // DO IF STATEMENT HERE:
             // if the mIndex is greater than or equal to mQuestion.length
+            if(mIndex < mQuestions.length)
+            {
+                mTextView.setText(mQuestions[mIndex].getTextResId());
+            }
             //  - set mIndex to 0
             //  - end the quiz
 
-            //Change text in view.
-            mTextView.setText(mQuestions[mIndex].getTextResId());
+            //Change text in view
+        }
+
+        else if(view.getId() == R.id.hint_button)
+        {
+
         }
     }
 
@@ -94,6 +110,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else
         {
+            Toast myToast = Toast.makeText(this, "You are incorrect!", Toast.LENGTH_SHORT);
+            myToast.setGravity(Gravity.TOP, 0, 180);
+            myToast.show();
             return false;
         }
     }
