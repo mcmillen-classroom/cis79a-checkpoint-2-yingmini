@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         else if(view.getId() == R.id.hint_button)
         {
-            Toast myToast = Toast.makeText(this, mQuestions[mIndex].getHintTextResId(), Toast.LENGTH_SHORT);
+            Toast myToast = Toast.makeText(this, mQuestions[mIndex].getHintTextResId(), Toast.LENGTH_LONG);
             myToast.setGravity(Gravity.TOP, 0, 180);
             myToast.show();
         }
